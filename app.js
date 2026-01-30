@@ -211,7 +211,6 @@ async function handleInput(char) {
   } else {
     inputBuffer = inputBuffer.slice(1) + char;
   }
-  console.log(inputBuffer);
   await checkAuth();
 }
 
