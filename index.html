@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ultra secure prototype password entry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orbit" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">▣</span>
+      <span class="brand-name">Ultra secure prototype password entry</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero login-hero">
+      <div class="hero-text">
+        <button class="accent" id="login-button">Login</button>
+      </div>
+      <div class="hero-card login-card">
+        <div class="meter">
+          <div class="meter-label">Input pattern</div>
+          <div class="meter-track">
+            <div class="meter-fill" id="pulse-fill" style="width: 72%"></div>
+          </div>
+          <p class="meter-note">Shuffle level: adaptive.</p>
+        </div>
+        <div class="stat-grid">
+          <div>
+            <div class="stat-value" id="stat-count">12</div>
+            <div class="stat-label">Keypad zones</div>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-updated">Live</div>
+            <div class="stat-label">Evasion mode</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="keypad-stage" id="keypad-stage" aria-hidden="true">
+      <div class="keypad" id="keypad" aria-label="Security keypad">
+        <div class="keypad-grid" id="keypad-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

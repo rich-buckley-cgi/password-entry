@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Access Granted</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orbit" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">▣</span>
+      <span class="brand-name">Secure Access</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-card" style="text-align:center;">
+        <p class="eyebrow">Access granted</p>
+        <h1>You have successfully logged in, that is a surprise.</h1>
+        <button class="accent" id="logout-button" style="margin-top:18px;">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const authKey = "password-entry-auth";
+    if (sessionStorage.getItem(authKey) !== "true") {
+      window.location.replace("index.html");
+    }
+    const logoutButton = document.getElementById("logout-button");
+    logoutButton.addEventListener("click", () => {
+      sessionStorage.removeItem(authKey);
+      window.location.replace("index.html");
+    });
+  </script>
+</body>
+</html>
